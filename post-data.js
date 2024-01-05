@@ -8,21 +8,24 @@ const scrapeAndPostData = async () => {
   app.use(express.json());
 
   const uri =
-    "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority"; // Replace with your MongoDB connection string
-  const dbName = "news-articles"; // Database name
-  // Collection name
+    "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority";
+  const dbName = "news-articles";
+  const client = new MongoClient(uri);
+
+  await client.connect();
+
+  const db = client.db(dbName);
 
   app.post("/scrape", async (req, res) => {
-    const { url } = req.body;
-    const collectionName = "scraped-content";
-    try {
+    const { arr, selector } = req.body;
+    arr.map(async (article, index) => {
+      const { url, collectionName } = article;
+      const collection = db.collection(collectionName);
       const response = await axios.get(url);
       const html = response.data;
-
       const $ = cheerio.load(html);
-      const paragraphs = $("article"); // Select all <p> tags from the HTML
-
-      const contentArray = []; // Array to store extracted content
+      const paragraphs = $(selector);
+      const contentArray = [];
 
       paragraphs.each((index, element) => {
         const content = $(element).find("a").text();
@@ -31,36 +34,34 @@ const scrapeAndPostData = async () => {
           .find(".MCAGUe")
           .find("img")
           .attr("src");
+        const link = $(element).find("a").attr("href");
         contentArray.push({
           content: content,
-          link: $(element).find("a").attr("href"),
+          link: link,
           image: img,
           newsSourceImage: newsSourceImage,
         });
       });
 
-      // Connect to MongoDB
-      const client = new MongoClient(uri);
-
-      await client.connect();
-      const db = client.db(dbName);
-      const collection = db.collection(collectionName);
-
-      // Insert extracted content into MongoDB collection
       await collection.insertMany(contentArray.map((content) => ({ content })));
 
-      await client.close();
-
-      res.status(200).send("Content extracted and saved to MongoDB");
-    } catch (error) {
-      console.error("Error scraping and saving content:", error);
-      res.status(500).send("Error scraping content");
-    }
+      index == arr.length - 1 &&
+        res
+          .status(200)
+          .send(
+            "Done scraping the given URLs to the respective collections. More information about number of articles added in each collection can be found in the logs."
+          );
+      console.log(
+        `\x1b[42mContent extracted and saved ${contentArray.length} articles to collection ${collectionName}\x1b[0m`
+      );
+    });
   });
 
   const PORT = 3002; // Specify the port number you want to use
   app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(
+      `\x1b[44m Server to scrape content "/srape" on port ${PORT} \x1b[0m`
+    );
   });
 };
 

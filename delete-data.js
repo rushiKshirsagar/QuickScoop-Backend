@@ -4,11 +4,10 @@ const deleteAllRecords = async () => {
   const uri =
     "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority"; // Replace with your MongoDB connection string
   const dbName = "news-articles"; // Database name
-  const collectionName = "scraped-content"; // Collection name
+  const arrOfCollections = ["Sports", "US", "Technology", "Science"];
 
-  async function removeAllDocuments() {
-    const client = new MongoClient(uri);
-
+  const client = new MongoClient(uri);
+  arrOfCollections.map(async (collectionName) => {
     try {
       await client.connect();
 
@@ -17,17 +16,13 @@ const deleteAllRecords = async () => {
 
       // Delete all documents from the collection
       const deleteResult = await collection.deleteMany({});
-
-      console.log(`${deleteResult.deletedCount} documents removed`);
+      console.log(
+        `\x1b[41m ${deleteResult.deletedCount} documents removed from ${collectionName} \x1b[0m`
+      );
     } catch (error) {
       console.error("Error removing documents:", error);
-    } finally {
-      await client.close();
     }
-  }
-
-  // Call the function to remove all documents
-  removeAllDocuments();
+  });
 };
 
 exports.deleteAllRecords = deleteAllRecords;

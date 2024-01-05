@@ -8,9 +8,10 @@ const getData = async () => {
   const uri =
     "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority";
   const dbName = "news-articles";
-  const collectionName = "scraped-content";
+  // const collectionName = "scraped-content";
 
-  app.get("/getData", async (req, res) => {
+  app.get("/getData/:collectionName", async (req, res) => {
+    const { collectionName } = req.params;
     const client = new MongoClient(uri);
 
     try {
@@ -32,7 +33,9 @@ const getData = async () => {
 
   const PORT = 3001;
   app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(
+      `\x1b[44m Server to get data "/getData/collectionName" on port ${PORT} \x1b[0m`
+    );
   });
 };
 

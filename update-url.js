@@ -74,7 +74,9 @@ const updateDestinationUrls = async () => {
 
   const PORT = 3003; // Specify the port number you want to use
   app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(
+      `\x1b[44m Server to update urls "/update-urls" on port ${PORT} \x1b[0m`
+    );
   });
 };
 
