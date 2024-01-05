@@ -7,6 +7,7 @@ const deleteAllRecords = async () => {
   const arrOfCollections = ["Sports", "US", "Technology", "Science"];
 
   const client = new MongoClient(uri);
+
   arrOfCollections.map(async (collectionName) => {
     try {
       await client.connect();
@@ -17,7 +18,8 @@ const deleteAllRecords = async () => {
       // Delete all documents from the collection
       const deleteResult = await collection.deleteMany({});
       console.log(
-        `\x1b[41m ${deleteResult.deletedCount} documents removed from ${collectionName} \x1b[0m`
+        `\x1b[41m ${deleteResult.deletedCount} documents removed from ${collectionName}\x1b[0m`,
+        `\n`
       );
     } catch (error) {
       console.error("Error removing documents:", error);
