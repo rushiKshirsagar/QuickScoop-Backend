@@ -41,10 +41,6 @@ const scrapeAndPostData = async () => {
           newsSourceImage: $(element).find(".MCAGUe").find("img").attr("src"),
         });
       });
-      process.stdout.write("Hello, World");
-      process.stdout.clearLine(0);
-      process.stdout.cursorTo(0);
-      process.stdout.write("\n");
 
       //push articlesArray in respective collections
       await collection.insertMany(articlesArray);
