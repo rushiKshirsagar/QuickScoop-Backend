@@ -1,27 +1,7 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const ModelConnect = require("../constants/model-connect");
 
-const summarizeText = async (str, length) => {
-  const options = {
-    method: "POST",
-    url: "https://chatgpt-text-summarization-da0dc1f94398.herokuapp.com/ask",
-    headers: {
-      "content-type": "application/json",
-      "X-RapidAPI-Key": "cf287f1b7fmsh11eee04c545020ap1900a5jsnc62279808b0d",
-      "X-RapidAPI-Host": "chatgpt-text-summarization.p.rapidapi.com",
-    },
-    data: {
-      message: str,
-      length: length,
-    },
-  };
-  try {
-    const response = await axios.request(options);
-    return response.data.summary;
-  } catch (error) {
-    console.error("Error:", error);
-  }
-};
 async function scrapeWebsite(url, doc, collection) {
   let summaryString = "";
   try {
@@ -37,7 +17,7 @@ async function scrapeWebsite(url, doc, collection) {
     });
 
     summaryString =
-      (await summarizeText(arr.toString().replace(/['"]/g, ""), 50)) || "N/A";
+      (await ModelConnect(arr.toString().replace(/['"]/g, ""), 50)) || "N/A";
 
     await collection.updateOne(
       { _id: doc._id },
