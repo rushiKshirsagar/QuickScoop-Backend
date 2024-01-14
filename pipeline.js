@@ -11,7 +11,7 @@ const scrapeAndPostPipeline = async () => {
     console.log("Database cleaned for pipeline");
     await scrapeGnews();
     console.log("Database updated with scraped content");
-    await fixUrls(["US", "Sports"]);
+    await fixUrls(["US", "Sports", "Science", "Technology"]);
   } catch (error) {
     console.log(error);
   }
