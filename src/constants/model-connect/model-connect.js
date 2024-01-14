@@ -1,7 +1,7 @@
 const { OpenAI } = require("openai");
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "",
 });
 
 const ModelConnect = async (req) => {

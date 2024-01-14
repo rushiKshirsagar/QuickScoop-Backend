@@ -1,6 +1,6 @@
 const scrapeGnews = require("./src/Step 2 - Scrape Gnews/scrape-util");
 const clearDb = require("./src/Step 1 - Clear DB/clear-db-util");
-const fixUrls = require("./src/Step 3 - Setup DB/UpdateUrlsAndAddSummary");
+const fixUrls = require("./src/Step 3 - Setup DB/update-urls-and-add-summary");
 const getData = require("./src/API/get-data");
 
 const scrapeAndPostPipeline = async () => {
