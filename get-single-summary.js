@@ -1,7 +1,6 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const express = require("express");
-const { MongoClient } = require("mongodb");
 
 const app = express();
 const port = process.env.PORT || 3006;
@@ -67,5 +66,3 @@ app.post("/api/newsSummarizerSingle", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-//https://www.news.google.com/articles/CBMiXWh0dHBzOi8vd3d3LmZveG5ld3MuY29tL3VzL25hdmFqby1uYXRpb24tZGVtYW5kcy1uYXNhLXN0b3AtbGF1bmNoLWJyaW5naW5nLWh1bWFuLXJlbWFpbnMtbW9vbtIBYWh0dHBzOi8vd3d3LmZveG5ld3MuY29tL3VzL25hdmFqby1uYXRpb24tZGVtYW5kcy1uYXNhLXN0b3AtbGF1bmNoLWJyaW5naW5nLWh1bWFuLXJlbWFpbnMtbW9vbi5hbXA?hl=en-US&gl=US&ceid=US%3Aen
