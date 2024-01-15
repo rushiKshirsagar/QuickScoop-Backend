@@ -6,7 +6,7 @@ const getData = async () => {
   const app = express();
   app.use(cors());
   const uri =
-    "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority";
+    "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority&ssl=true";
   const dbName = "news-articles";
   // const collectionName = "scraped-content";
 
