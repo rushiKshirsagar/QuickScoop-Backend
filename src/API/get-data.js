@@ -1,24 +1,19 @@
 const express = require("express");
 const { MongoClient } = require("mongodb");
 const cors = require("cors");
+const db = require("../constants/database-connection/database-connect");
 
 const getData = async () => {
+  const dataBase = await db();
   const app = express();
   app.use(cors());
-  const uri =
-    "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority&ssl=true";
-  const dbName = "news-articles";
   // const collectionName = "scraped-content";
 
   app.get("/getData/:collectionName", async (req, res) => {
     const { collectionName } = req.params;
-    const client = new MongoClient(uri);
 
     try {
-      await client.connect();
-
-      const db = client.db(dbName);
-      const collection = db.collection(collectionName);
+      const collection = dataBase.collection(collectionName);
 
       const data = await collection.find({}).toArray();
 

@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 
 // Connection URL for MongoDB database
 const mongoURI =
-  "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://rsk54:password1905@synopai.oabz6am.mongodb.net/?retryWrites=true&w=majority&ssl=true";
 
 // Function to connect to the MongoDB database
 async function connectToMongoDB() {
