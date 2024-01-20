@@ -21,8 +21,6 @@ const getData = async () => {
     } catch (error) {
       console.error("Error fetching data from MongoDB:", error);
       res.status(500).send("Error fetching data");
-    } finally {
-      await client.close();
     }
   });
 
