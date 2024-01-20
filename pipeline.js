@@ -7,12 +7,13 @@ const db = require("./src/constants/database-connection/database-connect");
 const scrapeAndPostPipeline = async () => {
   try {
     await getData();
-    await clearDb();
-    console.log("Database cleaned for pipeline");
-    await scrapeGnews();
-    console.log("Database updated with scraped content");
-    await fixUrls(["US", "Sports", "Science", "Technology"]);
-    console.log("URLs and Summary updated");
+    console.log("Database up and running");
+    // await clearDb();
+    // console.log("Database cleaned for pipeline");
+    // await scrapeGnews();
+    // console.log("Database updated with scraped content");
+    // await fixUrls(["US", "Sports", "Science", "Technology"]);
+    // console.log("URLs and Summary updated");
   } catch (error) {
     console.log(error);
   }
