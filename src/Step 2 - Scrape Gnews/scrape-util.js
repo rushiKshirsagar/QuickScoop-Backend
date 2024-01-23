@@ -25,6 +25,7 @@ const scrapeGnewsAndUpdateDB = async () => {
         link: $(element).find("a").attr("href"),
         image: $(element).find("figure").find("img").attr("src"),
         newsSourceImage: $(element).find(".MCAGUe").find("img").attr("src"),
+        timeElapsed: $(element).find(".hvbAAd").text(),
       });
     });
 

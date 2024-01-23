@@ -24,7 +24,7 @@ async function scrapeWebsite(url, doc, collection) {
       { $set: { summary: summaryString } }
     );
   } catch (error) {
-    console.log(`\x1b[31m Some Axios error has occured.\x1b[0m`);
+    console.log(`\x1b[31m Some Axios error has occured.\x1b[0m`, error);
   }
 }
 
