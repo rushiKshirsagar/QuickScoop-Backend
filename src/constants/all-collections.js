@@ -5,6 +5,7 @@ const collections = [
   "Science",
   "Finance",
   "Entertainment",
+  "Politics",
 ];
 
 module.exports = collections;

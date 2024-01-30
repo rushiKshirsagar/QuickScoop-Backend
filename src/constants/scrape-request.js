@@ -26,6 +26,10 @@ const dataToScrape = {
         url: "https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNREpxYW5RU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen",
         collectionName: "Entertainment",
       },
+      {
+        url: "https://news.google.com/topics/CAAqJQgKIh9DQkFTRVFvSUwyMHZNRFZ4ZERBU0JXVnVMVWRDS0FBUAE?hl=en-IN&gl=IN&ceid=IN%3Aen",
+        collectionName: "Politics",
+      },
     ],
     selector: ".IBr9hb",
   },
