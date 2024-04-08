@@ -79,7 +79,7 @@ The project involves creating a web scraper designed to extract and compile a co
 1. Get a free API Key at [OpenAI](https://platform.openai.com/api-keys)
 2. Clone the repo
    ```sh
-   git clone https://github.com/rushiKshirsagar/news-app-backend
+   git clone https://github.com/rushiKshirsagar/QuickScoop-Backend
    ```
 3. Install NPM packages
    ```sh
