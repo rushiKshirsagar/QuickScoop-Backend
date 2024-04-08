@@ -64,7 +64,7 @@ The project involves creating a web scraper designed to extract and compile a co
 * Node JS
 * ChatGpt
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -76,7 +76,7 @@ The project involves creating a web scraper designed to extract and compile a co
 
 ### Installation
 
-1. Get a free API Key at [OpenAI key](https://platform.openai.com/api-keys)
+1. Get a free API Key at [OpenAI](https://platform.openai.com/api-keys)
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
