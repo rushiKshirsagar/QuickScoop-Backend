@@ -76,7 +76,7 @@ The project involves creating a web scraper designed to extract and compile a co
 
 ### Installation
 
-1. Get a free API Key at [https://platform.openai.com/api-keys](OpenAI key)
+1. Get a free API Key at [OpenAI key](https://platform.openai.com/api-keys)
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
