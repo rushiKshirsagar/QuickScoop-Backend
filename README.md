@@ -85,7 +85,11 @@ The project involves creating a web scraper designed to extract and compile a co
    ```sh
    npm install
    ```
-4. Enter your API in `.env`
+4. Run the pipeline
+   ```sh
+   npm start
+   ```
+5. Enter your API in `.env`
    ```js
    OPEN_AI_API_KEY = 'ENTER YOUR API';
    ```
@@ -94,7 +98,7 @@ The project involves creating a web scraper designed to extract and compile a co
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-* [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Technology)_
+* [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Technology)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
