@@ -105,15 +105,12 @@ The project involves creating a web scraper designed to extract and compile a co
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
+- [ ] Add Changelog
+- [ ] Add back to top links
 - [ ] Add Additional Templates w/ Examples
 - [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/rushiKshirsagar/QuickScoop-Backend/issues) for a full list of proposed features (and known issues).
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
