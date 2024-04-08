@@ -19,9 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 
@@ -56,20 +53,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The project involves creating a web scraper designed to extract and compile a comprehensive set of information from news articles listed on Google News. The primary objective is to collect several key pieces of data from each article, enhancing accessibility and ease of analysis for the end-users. The data collected includes:
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+* Image: The main image associated with the news article, which often serves as a visual summary or highlight of the content.
+* News Source Thumbnail Image: A smaller image representing the logo or a characteristic thumbnail of the source publication. This aids in quickly identifying the origin of the news article.
+* URL of Article: The direct link to the full news article, enabling users to navigate to the original source for detailed reading.
+* Title of the Article: The headline or title of the news piece, providing a succinct overview of the article's subject matter.
+* Summary of the Article: A brief summary or an excerpt from the article, offering a quick insight into the main points or facts reported in the piece.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p>This project leverages various web scraping and data extraction techniques to programmatically search through Google News listings, identifying and retrieving the specified elements for each article. The end result is a curated dataset or feed that can be used for a variety of applications, such as media monitoring, research, content aggregation platforms, or personal news consumption. Ensuring compliance with legal and ethical standards, including respect for copyright and the terms of service of the websites involved, is a critical aspect of the project's implementation.</p>
 
 
 
