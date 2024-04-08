@@ -115,7 +115,7 @@ The project involves creating a web scraper designed to extract and compile a co
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 
 <!-- CONTRIBUTING -->
@@ -131,8 +131,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-<p align="right"><a href="#readme-top">back to top</a></p>
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
