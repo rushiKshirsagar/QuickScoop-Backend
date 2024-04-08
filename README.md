@@ -19,9 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-<!-- PROJECT LOGO -->
-<br />
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -48,8 +45,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -64,8 +59,6 @@ The project involves creating a web scraper designed to extract and compile a co
 
 <p>This project leverages various web scraping and data extraction techniques to programmatically search through Google News listings, identifying and retrieving the specified elements for each article. The end result is a curated dataset or feed that can be used for a variety of applications, such as media monitoring, research, content aggregation platforms, or personal news consumption. Ensuring compliance with legal and ethical standards, including respect for copyright and the terms of service of the websites involved, is a critical aspect of the project's implementation.</p>
 
-
-
 ### Built With
 
 * Node JS
@@ -73,27 +66,17 @@ The project involves creating a web scraper designed to extract and compile a co
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Node js
+* Open AI key
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [https://platform.openai.com/api-keys](OpenAI key)
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
