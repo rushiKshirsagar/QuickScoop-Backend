@@ -50,8 +50,10 @@ The project involves creating a web scraper designed to extract and compile a co
 * Image: The main image associated with the news article, which often serves as a visual summary or highlight of the content.
 * News Source Thumbnail Image: A smaller image representing the logo or a characteristic thumbnail of the source publication. This aids in quickly identifying the origin of the news article.
 * URL of Article: The direct link to the full news article, enabling users to navigate to the original source for detailed reading.
+  Google news has a proxy setup and does not provide the direct url to the article. 
 * Title of the Article: The headline or title of the news piece, providing a succinct overview of the article's subject matter.
 * Summary of the Article: A brief summary or an excerpt from the article, offering a quick insight into the main points or facts reported in the piece.
+  The content of the article is scraped and sent to chatGpt for summarization. The length of the summary can be adjusted.
 
 <p>This project leverages various web scraping and data extraction techniques to programmatically search through Google News listings, identifying and retrieving the specified elements for each article. The end result is a curated dataset or feed that can be used for a variety of applications, such as media monitoring, research, content aggregation platforms, or personal news consumption. Ensuring compliance with legal and ethical standards, including respect for copyright and the terms of service of the websites involved, is a critical aspect of the project's implementation.</p>
 
