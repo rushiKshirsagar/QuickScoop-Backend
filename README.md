@@ -102,19 +102,6 @@ The project involves creating a web scraper designed to extract and compile a co
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Add Changelog
-- [ ] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-
-See the [open issues](https://github.com/rushiKshirsagar/QuickScoop-Backend/issues) for a full list of proposed features (and known issues).
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
