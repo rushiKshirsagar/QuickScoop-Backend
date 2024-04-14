@@ -1,13 +1,15 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const express = require("express");
-var morgan = require('morgan')
+const morgan = require('morgan')
+const responseTime = require('response-time')
 
 const app = express();
 const port = process.env.PORT || 3006;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined'))
+app.use(responseTime())
 
 
 const summarizeText = async (str, length) => {
