@@ -2,11 +2,13 @@ const express = require("express");
 const { MongoClient } = require("mongodb");
 const cors = require("cors");
 const db = require("../constants/database-connection/database-connect");
+var morgan = require('morgan')
 
 const getData = async () => {
   const dataBase = await db();
   const app = express();
   app.use(cors());
+  app.use(morgan('common'))
   // const collectionName = "scraped-content";
 
   app.get("/getData/:collectionName", async (req, res) => {
