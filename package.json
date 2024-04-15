@@ -6,9 +6,11 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongodb": "^6.3.0",
+    "morgan": "^1.10.0",
     "nodemon": "^3.0.2",
     "openai": "^4.24.7",
-    "puppeteer": "^21.6.1"
+    "puppeteer": "^21.6.1",
+    "response-time": "^2.3.2"
   },
   "name": "mongo-node",
   "version": "1.0.0",
