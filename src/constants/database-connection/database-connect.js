@@ -1,3 +1,7 @@
+/**
+ * Imports the MongoClient class from the 'mongodb' module.
+ * This class is used to create a client instance for connecting to a MongoDB database.
+ */
 const { MongoClient } = require("mongodb");
 
 // Connection URL for MongoDB database
@@ -20,4 +24,4 @@ async function connectToMongoDB() {
   }
 }
 
-module.exports = connectToMongoDB;
+module.exports = { connectToMongoDB };

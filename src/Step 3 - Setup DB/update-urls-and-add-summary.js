@@ -1,3 +1,7 @@
+/**
+ * Imports the Puppeteer library for automating a headless Chrome browser.
+ * Puppeteer is used throughout the codebase to scrape web pages and extract data.
+ */
 const puppeteer = require("puppeteer");
 const db = require("../constants/database-connection/database-connect");
 const scrapeFinalUrlAndAddSummary = require("../Step 4 - Summarize/scrape-article");

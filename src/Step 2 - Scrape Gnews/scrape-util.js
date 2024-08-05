@@ -1,3 +1,7 @@
+/**
+ * Imports the Axios library for making HTTP requests.
+ * This is used throughout the scraping utility to fetch web pages.
+ */
 const axios = require("axios");
 const cheerio = require("cheerio");
 const db = require("../constants/database-connection/database-connect");

@@ -6,14 +6,19 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const responseTime = require('response-time');
-const getData = require('../path-to-your-getData-file');
+const getData = require('./get-data.js');
 
 const { expect } = chai;
 
+/**
+ * Test suite for the GET /getData/:collectionName endpoint.
+ * This test suite sets up a mock Express app and database connection,
+ * and tests the behavior of the endpoint for both successful and error cases.
+ */
 describe('GET /getData/:collectionName', function () {
   let app, request, sandbox;
 
-  before(async function () {
+  beforeAll(async function () {
     sandbox = sinon.createSandbox();
     app = express();
     app.use(cors());
@@ -28,14 +33,16 @@ describe('GET /getData/:collectionName', function () {
         }),
       }),
     };
-    const mockDb = sinon.stub().resolves(mockDatabase);
-    
-    sandbox.replace(require('../constants/database-connection/database-connect'), 'db', mockDb);
+    const mockConnectToMongoDB = sinon.stub().resolves(mockDatabase);
+    sandbox.stub(require('../constants/database-connection/database-connect'), 'connectToMongoDB').callsFake(mockConnectToMongoDB);
+
+    //sandbox.replace(require('../constants/database-connection/database-connect'), 'db', mockDb);
     
     app.get("/getData/:collectionName", async (req, res) => {
       const { collectionName } = req.params;
       try {
-        const collection = mockDatabase.collection(collectionName);
+        const dataBase = await mockConnectToMongoDB();
+        const collection = dataBase.collection(collectionName);
         const data = await collection.find({}).toArray();
         res.json(data);
       } catch (error) {
@@ -67,16 +74,17 @@ describe('GET /getData/:collectionName', function () {
         }),
       }),
     };
-    const mockDb = sinon.stub().resolves(mockDatabase);
+    const mockConnectToMongoDB = sinon.stub().resolves(mockDatabase);
+    sandbox.stub(require('../constants/database-connection/database-connect'), 'connectToMongoDB').callsFake(mockConnectToMongoDB);
 
-    sandbox.replace(require('../constants/database-connection/database-connect'), 'db', mockDb);
+    //sandbox.replace(require('../constants/database-connection/database-connect'), 'db', mockDb);
 
     const response = await request.get('/getData/testCollection');
     expect(response.status).to.equal(500);
     expect(response.text).to.equal('Error fetching data');
   });
 
-  after(async function () {
+  afterAll(async function () {
     sandbox.restore();
   });
 });
