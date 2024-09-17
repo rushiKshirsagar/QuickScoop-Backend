@@ -60,6 +60,7 @@ The project involves creating a web scraper designed to extract and compile a co
 ### Built With
 
 * Node JS
+* Express
 * ChatGpt
 
 <p align="right"><a href="#readme-top">back to top</a></p>
