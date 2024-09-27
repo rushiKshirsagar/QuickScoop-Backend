@@ -42,7 +42,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 📝 About The Project
 
 
 The project involves creating a web scraper designed to extract and compile a comprehensive set of information from news articles listed on Google News. The primary objective is to collect several key pieces of data from each article, enhancing accessibility and ease of analysis for the end-users. The data collected includes:
@@ -68,7 +68,7 @@ The project involves creating a web scraper designed to extract and compile a co
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
+### 😐 Prerequisites
 
 * Node js
 * Open AI key
@@ -97,14 +97,14 @@ The project involves creating a web scraper designed to extract and compile a co
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## 🎬 Usage
 
 * [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Technology)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- CONTRIBUTING -->
-## Contributing
+## 🤝🏼 Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
