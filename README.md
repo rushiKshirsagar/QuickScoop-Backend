@@ -1,4 +1,4 @@
-#### 🎬 [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Technology)
+#### 🎬 [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Sports)
 
 <!-- TABLE OF CONTENTS -->
 <details>
