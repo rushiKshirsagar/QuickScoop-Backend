@@ -1,7 +1,4 @@
-<!-- Demo -->
-## 🎬 Usage
-
-* [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Technology)
+#### 🎬 [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Technology)
 
 <!-- TABLE OF CONTENTS -->
 <details>
