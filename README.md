@@ -1,23 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+#### 🎬 [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Sports)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -42,7 +23,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 📝 About The Project
 
 
 The project involves creating a web scraper designed to extract and compile a comprehensive set of information from news articles listed on Google News. The primary objective is to collect several key pieces of data from each article, enhancing accessibility and ease of analysis for the end-users. The data collected includes:
@@ -50,7 +31,7 @@ The project involves creating a web scraper designed to extract and compile a co
 * Image: The main image associated with the news article, which often serves as a visual summary or highlight of the content.
 * News Source Thumbnail Image: A smaller image representing the logo or a characteristic thumbnail of the source publication. This aids in quickly identifying the origin of the news article.
 * URL of Article: The direct link to the full news article, enabling users to navigate to the original source for detailed reading.
-  Google news has a proxy setup and does not provide the direct url to the article. 
+  Google news has a proxy setup and does not provide the direct url to the article in the dom for scraping. 
 * Title of the Article: The headline or title of the news piece, providing a succinct overview of the article's subject matter.
 * Summary of the Article: A brief summary or an excerpt from the article, offering a quick insight into the main points or facts reported in the piece.
   The content of the article is scraped and sent to chatGpt for summarization. The length of the summary can be adjusted.
@@ -60,6 +41,7 @@ The project involves creating a web scraper designed to extract and compile a co
 ### Built With
 
 * Node JS
+* Express
 * ChatGpt
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -67,7 +49,7 @@ The project involves creating a web scraper designed to extract and compile a co
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
+### 😐 Prerequisites
 
 * Node js
 * Open AI key
@@ -91,17 +73,12 @@ The project involves creating a web scraper designed to extract and compile a co
    ```js
    OPEN_AI_API_KEY = 'ENTER YOUR API';
    ```
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-* [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Technology)
-
+6. Get data for the respection collection @ localhost:3000/{collectionName}
+   (Sports, Entertainment, Politics, Science, Technology, etc)
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- CONTRIBUTING -->
-## Contributing
+## 🤝🏼 Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
