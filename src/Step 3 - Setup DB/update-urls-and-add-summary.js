@@ -22,20 +22,31 @@ const updateDestinationUrlsAndSummary = async (collectionNames) => {
           const currentUrl = `https://news.google.com/${doc.link.slice(2)}`;
 
           try {
-            await page.goto(currentUrl, { timeout: 10000 });
-            await page.waitForNavigation({ timeout: 10000 });
+            await page.goto(currentUrl, { timeout: 60000 });
+            await page.waitForNavigation({
+              timeout: 60000,
+              waitUntil: "networkidle2",
+            });
             const finalUrl = page.url();
 
-            await collection.updateOne(
-              { _id: doc._id },
-              { $set: { destinationURL: finalUrl } }
-            );
-            await scrapeFinalUrlAndAddSummary(finalUrl, doc, collection);
+            if (finalUrl !== currentUrl && finalUrl) {
+              await collection.updateOne(
+                { _id: doc._id },
+                { $set: { destinationURL: finalUrl } }
+              );
+              await scrapeFinalUrlAndAddSummary(finalUrl, doc, collection);
+            } else {
+              await collection.deleteOne({ _id: doc._id });
+              console.error(
+                `\x1b[41m Some issue with ${doc._id} in ${collectionName}: and was deleted \x1b[0m`
+              );
+            }
             console.log(
               `\x1b[43m Updated URL for doc ${doc._id} and added summary in ${collectionName} \x1b[0m`
             );
           } catch (error) {
             await collection.deleteOne({ _id: doc._id });
+            console.log(error);
             console.error(
               `\x1b[41m Error processing doc ${doc._id} in ${collectionName}: and was deleted \x1b[0m`
             );

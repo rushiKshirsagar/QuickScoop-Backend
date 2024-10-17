@@ -6,6 +6,7 @@ const collections = [
   "Finance",
   "Entertainment",
   "Politics",
+  "Breaking News",
 ];
 
 module.exports = collections;
