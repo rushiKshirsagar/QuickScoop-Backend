@@ -9,7 +9,7 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.0.2",
     "openai": "^4.24.7",
-    "puppeteer": "^21.6.1",
+    "puppeteer": "^23.7.0",
     "response-time": "^2.3.2"
   },
   "name": "mongo-node",

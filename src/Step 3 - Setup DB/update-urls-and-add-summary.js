@@ -4,7 +4,7 @@ const scrapeFinalUrlAndAddSummary = require("../Step 4 - Summarize/scrape-articl
 
 const updateDestinationUrlsAndSummary = async (collectionNames) => {
   const dataBase = await db();
-  const browser = await puppeteer.launch({ headless: "new", timeout: 60000 });
+  const browser = await puppeteer.launch({ headless: "new", timeout: 10000 });
   const batchSize = 5;
 
   for (const collectionName of collectionNames) {
@@ -22,9 +22,9 @@ const updateDestinationUrlsAndSummary = async (collectionNames) => {
           const currentUrl = `https://news.google.com/${doc.link.slice(2)}`;
 
           try {
-            await page.goto(currentUrl, { timeout: 60000 });
+            await page.goto(currentUrl, { timeout: 10000 });
             await page.waitForNavigation({
-              timeout: 60000,
+              timeout: 10000,
               waitUntil: "networkidle2",
             });
             const finalUrl = page.url();

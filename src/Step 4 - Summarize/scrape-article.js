@@ -17,7 +17,7 @@ async function scrapeWebsite(url, doc, collection) {
     });
 
     summaryString =
-      (await ModelConnect(arr.toString().replace(/['"]/g, ""), 50)) || "N/A";
+      (await ModelConnect(arr.toString().replace(/['"]/g, ""), 75)) || "N/A";
 
     await collection.updateOne(
       { _id: doc._id },
