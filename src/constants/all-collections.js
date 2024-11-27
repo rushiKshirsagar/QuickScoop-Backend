@@ -1,4 +1,6 @@
 const collections = [
+  "Breaking News",
+  "World",
   "India",
   "Sports",
   "Technology",
@@ -6,7 +8,8 @@ const collections = [
   "Finance",
   "Entertainment",
   "Politics",
-  "Breaking News",
+  "Health",
+  "Fact Check",
 ];
 
 module.exports = collections;

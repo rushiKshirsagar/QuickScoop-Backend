@@ -4,13 +4,13 @@ const db = require("../constants/database-connection/database-connect");
 const dataToScrape = require("../constants/scrape-request");
 
 const scrapeGnewsAndUpdateDB = async () => {
-  const { arrayOfUrlsToBeScraped, selector } = dataToScrape.body;
+  const { arrayOfUrlsToBeScraped } = dataToScrape.body;
   const dataBase = await db();
 
   //iterate over each URL. Scrape it's articles
   //& store it in the respective collection
   const scrapingTasks = arrayOfUrlsToBeScraped.map(async (article, index) => {
-    const { url, collectionName } = article;
+    const { url, collectionName, selector } = article;
     const collection = dataBase.collection(collectionName);
     const response = await axios.get(url);
     const html = response.data;
