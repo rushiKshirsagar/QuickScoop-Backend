@@ -33,7 +33,7 @@ const getData = async () => {
           const searchFilter = {
             $or: [
               { title: { $regex: search, $options: "i" } }, // Case-insensitive search in 'title'
-              { content: { $regex: search, $options: "i" } }, // Case-insensitive search in 'content'
+              { summary: { $regex: search, $options: "i" } }, // Case-insensitive search in 'content'
             ],
           };
 
