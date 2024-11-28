@@ -32,7 +32,7 @@ const getData = async () => {
           // If a non-empty search query is provided, filter by search term
           const searchFilter = {
             $or: [
-              { title: { $regex: search, $options: "i" } }, // Case-insensitive search in 'title'
+              { content: { $regex: search, $options: "i" } }, // Case-insensitive search in 'title'
               { summary: { $regex: search, $options: "i" } }, // Case-insensitive search in 'content'
             ],
           };
