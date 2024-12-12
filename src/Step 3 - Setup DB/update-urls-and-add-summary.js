@@ -14,7 +14,7 @@ const updateDestinationUrlsAndSummary = async (collectionNames) => {
       const collection = dataBase.collection(collectionName);
       const documents = await collection.find({}).toArray();
 
-      for (let i = 0; i < 20; i += batchSize) {
+      for (let i = 0; i < 50; i += batchSize) {
         const batch = documents.slice(i, i + batchSize);
 
         const updatePromises = batch.map(async (doc) => {
