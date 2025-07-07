@@ -4,8 +4,8 @@ const scrapeFinalUrlAndAddSummary = require("../Step 4 - Summarize/scrape-articl
 
 const updateDestinationUrlsAndSummary = async (collectionNames) => {
   const dataBase = await db();
-  const browser = await puppeteer.launch({ headless: "new", timeout: 10000 });
-  const batchSize = 5;
+  const browser = await puppeteer.launch({ headless: "new", timeout: 20000 });
+  const batchSize = 10;
 
   for (const collectionName of collectionNames) {
     console.log(`\x1b[30m Processing Collection: ${collectionName} \x1b[0m`);
