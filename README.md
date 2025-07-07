@@ -73,7 +73,7 @@ The project involves creating a web scraper designed to extract and compile a co
    ```js
    OPEN_AI_API_KEY = 'ENTER YOUR API';
    ```
-6. Get data for the respective collection @ localhost:3000/{collectionName}
+6. Get data for the respective collection @ localhost:3000/search?search=trump&countryCode=usa
    (Sports, Entertainment, Politics, Science, Technology, etc)
 <p align="right"><a href="#readme-top">back to top</a></p>
 
