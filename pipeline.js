@@ -8,12 +8,12 @@ const scrapeAndPostPipeline = async () => {
   try {
     await getData();
     console.log("Database up and running");
-    // await clearDb();
-    // console.log("Database cleaned for pipeline");
-    // await scrapeGnews();
-    // console.log("Database updated with scraped content");
-    // await fixUrls(collections);
-    // console.log("URLs and Summary updated");
+    await clearDb();
+    console.log("Database cleaned for pipeline");
+    await scrapeGnews();
+    console.log("Database updated with scraped content");
+    await fixUrls(collections);
+    console.log("URLs and Summary updated");
   } catch (error) {
     console.log(error);
   }
