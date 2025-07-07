@@ -53,6 +53,11 @@ const dataToScrape = {
         selector: ".IBr9hb",
       },
       {
+        url: "https://news.google.com/topics/CAAqHAgKIhZDQklTQ2pvSWJHOWpZV3hmZGpJb0FBUAE?hl=en-IN&gl=IN&ceid=IN%3Aen",
+        collectionName: "Local",
+        selector: ".IBr9hb",
+      },
+      {
         url: "https://news.google.com/search?q=fact%20check&hl=en-IN&gl=IN&ceid=IN%3Aen",
         collectionName: "Fact Check",
         selector: ".IFHyqb.DeXSAc",
