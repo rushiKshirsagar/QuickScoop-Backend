@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
 
 // Connection URL for MongoDB database
-const mongoURI = ""
+const mongoURI = process.env.MONGO_CONNECTION_URL
 
 // Function to connect to the MongoDB database
 async function connectToMongoDB() {
