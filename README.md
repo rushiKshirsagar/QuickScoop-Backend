@@ -1,4 +1,4 @@
-#### 🎬 [Demo](https://synopai-backend-4789501fab85.herokuapp.com/getData/Sports)
+#### 🎬 [Demo](https://quickscoop-backend-d915c315d985.herokuapp.com/search?search&countryCode=usa)
 
 <!-- TABLE OF CONTENTS -->
 <details>
