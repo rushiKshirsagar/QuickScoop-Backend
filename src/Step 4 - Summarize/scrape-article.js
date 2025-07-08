@@ -3,28 +3,31 @@ const cheerio = require("cheerio");
 const ModelConnect = require("../constants/model-connect");
 
 async function scrapeWebsite(url, doc, collection) {
-  let summaryString = "";
   try {
-    const response = await axios.get(url);
-    const html = response.data;
-
+    const { data: html } = await axios.get(url);
     const $ = cheerio.load(html);
-    let arr = [];
 
-    $("p").each((index, element) => {
-      const content = $(element).text();
-      arr.push(content);
-    });
+    const paragraphTexts = $("p")
+      .map((_, el) => $(el).text().trim())
+      .get()
+      .filter(text => text.length > 0); // Skip empty paragraphs
 
-    summaryString =
-      (await ModelConnect(arr.toString().replace(/['"]/g, ""), 75)) || "N/A";
+    const combinedText = paragraphTexts.join(" ");
+    const cleanedText = combinedText.replace(/['"]/g, "");
+
+    const summary = await ModelConnect(cleanedText, 75);
+    const summaryString = summary || "N/A";
 
     await collection.updateOne(
       { _id: doc._id },
       { $set: { summary: summaryString } }
     );
+
+    console.log(`\x1b[32m Summary successfully updated for: ${url}\x1b[0m`);
   } catch (error) {
-    console.log(`\x1b[31m Some Axios error has occured.\x1b[0m`, error);
+    console.error(
+      `\x1b[31m Error scraping URL: ${url} | Error: ${error.message}\x1b[0m`
+    );
   }
 }
 
